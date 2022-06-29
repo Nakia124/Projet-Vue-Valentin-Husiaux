@@ -15,7 +15,7 @@
           - Display 'BaseImage' for each snapshoot
           - Link to display single snapshoot
         -->
-        {{cmpSingleItem.title}}
+       
       </article>
     </template>
     <template v-else>
@@ -64,12 +64,12 @@ import { dexieDb } from '@/services/dexie.service'
         Save API response in Dexie
       */
         // Save new snapshot in IndexDB with Dexie.js
-        this.cmpSingleItem = await dexieDb.snapshoots.get( +this.$route.params.id );
-        if(!this.cmpSingleItem){
-          this.$router.push({ name: 'DashboardView' })
-        }
+        this.cmpSingleItem = await dexieDb.snapshoots.get( +this.$route.params.id )
+        
       //
     }
+
+    
   }
 //
 </script>
